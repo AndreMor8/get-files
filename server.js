@@ -26,5 +26,5 @@ function getLink(bucket, key, time) {
     return v4.createPresignedURL("GET", bucket + "." + process.env.ENDPOINT, "/" + key, "s3", "UNSIGNED-PAYLOAD", { region: process.env.REGION, signSessionToken: true, doubleEscape: false, expires: time });
 }
 
-const listening = await app.listen({ port: (process.env.PORT || 0), host: (process.env.HOST || "127.0.0.1") });
+const listening = await app.listen({ port: (process.env.PORT || 0), host: (process.env.IP || "127.0.0.1") });
 console.log(`Server listening on ${listening}`);
