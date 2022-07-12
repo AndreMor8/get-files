@@ -1,0 +1,4 @@
+node_modules/
+r2-tokens.txt
+.env
+package-lock.json
